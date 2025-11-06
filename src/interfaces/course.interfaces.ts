@@ -10,6 +10,7 @@ export interface ICourse extends Document {
     whoThisCourseFor: string[];
     requirements: string[];
   };
+  introVideo?: string;
   category: string;
   subCategory: string;
   language: string;
