@@ -1,3 +1,8 @@
+/**
+ * Copyright 2025 Programmer-Jaf
+ * @license Apache-2.0
+ */
+
 import dotenv from 'dotenv';
 import path from 'path';
 import { z } from 'zod';
