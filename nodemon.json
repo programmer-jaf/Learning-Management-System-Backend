@@ -1,0 +1,7 @@
+{
+  "watch": ["src/**/*.ts", "src/**/*.js"],
+  "ext": "ts,js",
+  "ignore": ["node_modules/**/*", "build/**/*"],
+  "delay": 1000,
+  "exec": "ts-node -r tsconfig-paths/register src/server.ts"
+}
