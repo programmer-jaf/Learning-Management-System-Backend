@@ -97,8 +97,8 @@ app.use(express.static('public'));
 // --------------------------------------------------
 // Simple Health Check Route
 // --------------------------------------------------
-app.get('api/1/health', (req: Request, res: Response) => {
-  res.status(200).json({ status: 'ok', env: ENV.NODE_ENV });
+app.get('/api/v1/health', (_req, res) => {
+  return res.status(200).json({ success: true, message: 'Server is healthy' });
 });
 
 // --------------------------------------------------
