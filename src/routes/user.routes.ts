@@ -13,16 +13,13 @@ import { Router } from 'express';
 // --------------------------------------------------
 const router = Router();
 
-
 // --------------------------------------------------
-// Auth Routes
+// User Routes
 // --------------------------------------------------
-router.post('/signup');
-router.post('/signin');
-router.post('/signout');
-router.post('/forgot-password');
-router.post('/reset-password');
-router.post('/refresh-token');
+router.get('/me');
+router.put('/update');
+router.put('/change-password');
+router.post('/update-photo');
 
 // --------------------------------------------------
 // Export Router
