@@ -9,12 +9,13 @@
 
 import { Document, Types } from 'mongoose';
 
-export interface IPurchase extends Document {
-  user: Types.ObjectId;
-  course: Types.ObjectId;
-  price: number;
-  paymentMethod: 'credit' | 'debit' | 'stripe';
-  transactionId: string;
-  status: 'success' | 'failed' | 'pending';
-  createdAt: Date;
+export interface IPurchaseItem extends Document {
+  userId: Types.ObjectId;
+  courseId: Types.ObjectId;
+  paymentId?: string; // reference from payment gateway
+  amount: number;
+  currency: string;
+  purchasedAt: Date;
+  completed: boolean;
 }
+
