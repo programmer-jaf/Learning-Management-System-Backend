@@ -6,16 +6,14 @@
 // --------------------------------------------------
 // Node Modules
 // --------------------------------------------------
-
 import { Document, Types } from 'mongoose';
 
 export interface IWatchItem extends Document {
   userId: Types.ObjectId;
   courseId: Types.ObjectId;
-  lectureId?: Types.ObjectId;
-  progress: number; // e.g., percentage 0-100
-  completed: boolean;
-  lastWatchedAt: Date;
+  lectureId?: Types.ObjectId; // optional if tracking specific lecture
+  progress: number; // percentage completed, e.g., 0-100
+  lastWatchedAt?: Date;
   createdAt: Date;
   updatedAt: Date;
 }
