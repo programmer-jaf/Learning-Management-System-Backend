@@ -1,10 +1,11 @@
-import { JwtPayload } from 'jsonwebtoken';
+// src/types/express/index.d.ts
+import { Types } from 'mongoose';
 
 declare global {
   namespace Express {
     interface Request {
-      user?: JwtPayload & {
-        id: string;
+      user?: {
+        id: Types.ObjectId;
         role: 'admin' | 'instructor' | 'student';
       };
     }
