@@ -15,7 +15,7 @@ import authRouter from './auth.routes'; // Authentication
 // import userRouter from './user.routes'; // User profile & settings
 // import userDashboardRouter from './user.dashboard.routes'; // Student dashboard
 import instructorRouter from './instructor.routes'; // Instructor routes
-// import courseRouter from './course.routes'; // Courses
+import courseRouter from './course.routes'; // Courses
 // import reviewRouter from './review.routes'; // Reviews
 // import giftRouter from './gift.course.routes'; // Gift courses
 // import wishlistRouter from './wishlist.routes'; // Wishlist
@@ -56,7 +56,7 @@ router.use('/instructors', instructorRouter);
 // // Courses
 // // /api/v1/courses
 // // --------------------------------------------------
-// router.use('/courses', courseRouter);
+router.use('/courses', courseRouter);
 
 // // --------------------------------------------------
 // // Reviews
