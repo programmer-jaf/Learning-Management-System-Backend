@@ -7,6 +7,7 @@
 // Node-Modules
 // --------------------------------------------------
 import { isAuthenticated } from '@middlewares/auth.middlewares';
+import { getAllCourseController } from '@modules/course/v1/controller/get-all-course.controller';
 import { GetCourseController } from '@modules/course/v1/controller/get-course.controller';
 import { Router } from 'express';
 
@@ -18,7 +19,7 @@ const router = Router();
 // --------------------------------------------------
 // Course Public Routes
 // --------------------------------------------------
-// router.get('/', isAuthenticated,);
+router.get('/', getAllCourseController);
 router.get('/:courseId', isAuthenticated, GetCourseController);
 // router.get('/:courseId/related');
 // router.get('/:courseId/instructor');
